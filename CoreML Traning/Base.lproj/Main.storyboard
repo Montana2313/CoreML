@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,58 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreML_Traning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6T-aT-XW7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="563"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ML'den gelecek burada gözükücek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-cT-nNY">
+                                <rect key="frame" x="14" y="644" width="387" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="bnq-KQ-em9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-nE-jvb">
+                                <rect key="frame" x="109" y="753" width="174" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NAl-oa-oaC"/>
+                                </constraints>
+                                <state key="normal" title="Tara"/>
+                                <connections>
+                                    <action selector="TaraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQY-BW-WbD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R6T-aT-XW7" firstAttribute="centerX" secondItem="QdW-cT-nNY" secondAttribute="centerX" id="9tI-rB-Qbs"/>
+                            <constraint firstItem="R6T-aT-XW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EHt-9r-akf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rsW-nE-jvb" secondAttribute="trailing" constant="131" id="Ezz-O3-Gbp"/>
+                            <constraint firstItem="rsW-nE-jvb" firstAttribute="top" secondItem="QdW-cT-nNY" secondAttribute="bottom" constant="48" id="Of7-Ih-JuV"/>
+                            <constraint firstItem="R6T-aT-XW7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T7d-rK-pVO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rsW-nE-jvb" secondAttribute="bottom" constant="29" id="blS-Fy-Pxu"/>
+                            <constraint firstItem="rsW-nE-jvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="eW2-j1-UO3"/>
+                            <constraint firstItem="QdW-cT-nNY" firstAttribute="top" secondItem="R6T-aT-XW7" secondAttribute="bottom" constant="37" id="hlm-uY-svF"/>
+                            <constraint firstAttribute="trailing" secondItem="R6T-aT-XW7" secondAttribute="trailing" id="ioI-vZ-nep"/>
+                            <constraint firstItem="QdW-cT-nNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="r44-BK-Q5M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="R6T-aT-XW7" id="fKm-aI-Yet"/>
+                        <outlet property="labelofInfo" destination="QdW-cT-nNY" id="YqX-YL-u6X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
 </document>

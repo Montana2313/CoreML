@@ -13,6 +13,7 @@
 		042E78A42274CEE60064D99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042E78A32274CEE60064D99A /* Assets.xcassets */; };
 		042E78A72274CEE60064D99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042E78A52274CEE60064D99A /* LaunchScreen.storyboard */; };
 		042E78B22274CEE60064D99A /* CoreML_TraningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E78B12274CEE60064D99A /* CoreML_TraningTests.swift */; };
+		042E78BD2274D4670064D99A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 042E78BC2274D4670064D99A /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		042E78AD2274CEE60064D99A /* CoreML TraningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML TraningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		042E78B12274CEE60064D99A /* CoreML_TraningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_TraningTests.swift; sourceTree = "<group>"; };
 		042E78B32274CEE70064D99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042E78BC2274D4670064D99A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				042E78A32274CEE60064D99A /* Assets.xcassets */,
 				042E78A52274CEE60064D99A /* LaunchScreen.storyboard */,
 				042E78A82274CEE60064D99A /* Info.plist */,
+				042E78BC2274D4670064D99A /* MobileNet.mlmodel */,
 			);
 			path = "CoreML Traning";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				042E789F2274CEE50064D99A /* ViewController.swift in Sources */,
 				042E789D2274CEE50064D99A /* AppDelegate.swift in Sources */,
+				042E78BD2274D4670064D99A /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
